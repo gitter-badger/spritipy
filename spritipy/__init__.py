@@ -1,1 +1,2 @@
-from .brainsprite import show_sprite
+# TODO: add docstring
+from .sprite import montage
