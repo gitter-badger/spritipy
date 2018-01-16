@@ -5,6 +5,8 @@ import numpy as np
 import nibabel as nib
 from PIL import Image
 from nilearn.image import resample_img
+import matplotlib
+matplotlib.use('Qt5Agg')
 import matplotlib.pyplot as plt
 
 
@@ -51,6 +53,7 @@ def montage(vol):
 
 def make_sprite(img_path, vmax=None, vmin=None, colmap=plt.cm.Greys):
     # TODO: set colormap ranges independently of alpha masking
+    # TODO: check dimensions and sampling, possibly correct
     """
     This method generates a brainsprite ready sprite image from a 3D brain image
     file. Save the output of this method to a file for brainsprite to access.
